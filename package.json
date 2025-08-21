@@ -1,0 +1,24 @@
+{
+  "name": "mindvault",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"npm install --prefix MVBackend && npm install --prefix MVFrontend && npm run build --prefix MVFrontend",
+    "start": "npm run start --prefix MVBackend",
+    "backend:dev":"npm run dev --prefix MVBackend",
+    "frontend:dev":"npm run dev --prefix MVFrontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goutham-Peddiraju/mind-vault.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Goutham-Peddiraju/mind-vault/issues"
+  },
+  "homepage": "https://github.com/Goutham-Peddiraju/mind-vault#readme"
+}

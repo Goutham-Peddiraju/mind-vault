@@ -26,28 +26,28 @@ exports.register = async (req, res) => {
   }
 };
 
-exports.changePassword = async (req, res) => {
-  try {
-    const { oldPassword, newPassword } = req.body;
-    const user = await User.findById(req.user.id);
+// exports.changePassword = async (req, res) => {
+//   try {
+//     const { oldPassword, newPassword } = req.body;
+//     const user = await User.findById(req.user.id);
 
-    if (!user) return res.status(404).json({ msg: "User not found" });
+//     if (!user) return res.status(404).json({ msg: "User not found" });
 
-    // Check old password
-    const isMatch = await bcrypt.compare(oldPassword, user.password);
-    if (!isMatch)
-      return res.status(400).json({ msg: "Old password is incorrect" });
+//     // Check old password
+//     const isMatch = await bcrypt.compare(oldPassword, user.password);
+//     if (!isMatch)
+//       return res.status(400).json({ msg: "Old password is incorrect" });
 
-    // Hash new password
-    const salt = await bcrypt.genSalt(10);
-    // const hashedPassword = await bcrypt.hash(newPassword, salt); // store hash in a variable
-    user.password = newPassword; // save hashed password
-    await user.save();
-    return res.json({ success: true, msg: "Password changed successfully" });
-  } catch (error) {
-    res.status(500).send("Server error");
-  }
-};
+//     // Hash new password
+//     const salt = await bcrypt.genSalt(10);
+//     // const hashedPassword = await bcrypt.hash(newPassword, salt); // store hash in a variable
+//     user.password = newPassword; // save hashed password
+//     await user.save();
+//     return res.json({ success: true, msg: "Password changed successfully" });
+//   } catch (error) {
+//     res.status(500).send("Server error");
+//   }
+// };
 
 exports.login = async (req, res) => {
   const { email, password } = req.body;
