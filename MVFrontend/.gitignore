@@ -8,8 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-./MVFRONTEND/node_modules
-./MVBACKEND/node_modules
+./MVFrontend/node_modules
+./MVBackend/node_modules
 dist
 dist-ssr
 *.local
@@ -26,5 +26,5 @@ dist-ssr
 *.sw?
 
 .env
-./MVFRONTEND/.env
-./MVBACKEND/.env
+./MVFrontend/.env
+./MVBackend/.env
