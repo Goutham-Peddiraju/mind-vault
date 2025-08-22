@@ -66,9 +66,9 @@ const authSlice = createSlice({
       .addCase(loginUser.pending, (state) => { state.loading = true; })
       .addCase(loginUser.fulfilled, (state, action) => { state.loading = false; state.user = action.payload; })
       .addCase(loginUser.rejected, (state, action) => { state.loading = false; state.error = action.payload; })
-      .addCase(changePassword.pending, (state) => {state.loading = true;state.error = null;})
-      .addCase(changePassword.fulfilled, (state) => {state.loading = false;})
-      .addCase(changePassword.rejected, (state, action) => {state.loading = false;state.error = action.payload;});
+      // .addCase(changePassword.pending, (state) => {state.loading = true;state.error = null;})
+      // .addCase(changePassword.fulfilled, (state) => {state.loading = false;})
+      // .addCase(changePassword.rejected, (state, action) => {state.loading = false;state.error = action.payload;});
   }
 });
 
