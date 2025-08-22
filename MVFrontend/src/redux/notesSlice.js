@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/notes"; // backend
+const API_URL = "https://mind-vault-ng5c.onrender.com/api/notes"; // backend
 
 const tokenConfig = () => ({
   headers: { Authorization: `Bearer ${sessionStorage.getItem("token")}` },

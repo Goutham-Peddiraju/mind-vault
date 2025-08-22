@@ -25,28 +25,28 @@ export const loginUser = createAsyncThunk("auth/login", async (data, { rejectWit
 });
 
 
-export const changePassword = createAsyncThunk(
-  "auth/change-password",
-  async ({ oldPassword, newPassword }, { rejectWithValue }) => {
-    try {
-      console.log('line 30')
-      const token = sessionStorage.getItem("token");
-      console.log(token);
-      const res = await API.post(
-        "/auth/change-password",
-        { oldPassword, newPassword },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-      return res.data;
-    } catch (err) {
-      return rejectWithValue(err.response.data);
-    }
-  }
-);
+// export const changePassword = createAsyncThunk(
+//   "auth/change-password",
+//   async ({ oldPassword, newPassword }, { rejectWithValue }) => {
+//     try {
+//       console.log('line 30')
+//       const token = sessionStorage.getItem("token");
+//       console.log(token);
+//       const res = await API.post(
+//         "/auth/change-password",
+//         { oldPassword, newPassword },
+//         {
+//           headers: {
+//             Authorization: `Bearer ${token}`,
+//           },
+//         }
+//       );
+//       return res.data;
+//     } catch (err) {
+//       return rejectWithValue(err.response.data);
+//     }
+//   }
+// );
 
 
 const authSlice = createSlice({
