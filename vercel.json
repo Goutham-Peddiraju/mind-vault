@@ -8,7 +8,8 @@
     { "src": "/api/(.*)", "dest": "api/index.js" },
     {
       "src": "/(.*)",
-      "dest": "MVFrontend/index.html"
+      "dest": "MVFrontend/index.html",
+      "continue": true
     }
   ]
 }
