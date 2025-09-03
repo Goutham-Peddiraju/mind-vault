@@ -10,13 +10,11 @@ const app = express();
 
 // ✅ Allow only your Vercel frontend + local dev
 app.use(cors({
-  origin: [
-    "https://goutham-mind-vault.vercel.app", // frontend (Vercel)
-    "http://localhost:3000"                  // for local testing
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+    origin: "https://mind-vault-delta.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
 }));
+
 
 app.use(express.json());
 

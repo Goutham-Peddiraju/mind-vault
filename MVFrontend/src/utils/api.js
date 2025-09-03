@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:5000/api" });
+const API = axios.create({ baseURL: "https://mind-vault-ng5c.onrender.com/" });
 
 // Attach token to every request if exists
 API.interceptors.request.use((req) => {
