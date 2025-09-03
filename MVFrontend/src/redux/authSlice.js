@@ -5,7 +5,7 @@ import API from "../utils/api";
 
 export const registerUser = createAsyncThunk("auth/register", async (data, { rejectWithValue }) => {
   try {
-    const res = await API.post("/auth/register", data);
+    const res = await API.post("/api/auth/register", data);
     sessionStorage.setItem("token", res.data.token);
     return res.data;
   } catch (err) {
@@ -15,7 +15,7 @@ export const registerUser = createAsyncThunk("auth/register", async (data, { rej
 
 export const loginUser = createAsyncThunk("auth/login", async (data, { rejectWithValue }) => {
   try {
-    const res = await API.post("/auth/login", data);
+    const res = await API.post("/api/auth/login", data);
     sessionStorage.setItem("token", res.data.token);
     return res.data;
 
